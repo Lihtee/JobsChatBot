@@ -1,0 +1,13 @@
+<!doctype html>
+<title>Hello from Flask</title>
+<form method="POST" action="">
+    <span>Question about job:</span> <br/>
+    <input type="text" name="question" value="{{ question }}" style="width: 40%"/> <br/>
+    <input type="submit" name="submit"/>
+    {% if answer %}
+        <h1>Your answer: </h1>
+        <p>Название вакансии:{{ answer[0] }}</p>
+        <p>Номер из датасета:{{ answer[1] }}</p>
+        <p>Описание:{{ answer[2] }}</p>
+    {% endif %}
+</form>
